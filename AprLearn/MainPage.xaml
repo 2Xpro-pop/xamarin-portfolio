@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:AprLearn.ViewModels" x:DataType="viewModels:DocumentSerializer"
+             x:Class="AprLearn.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Document Serializer" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            
+            <StackLayout Padding="10">
+                
+                <Editor x:Name="editor" FontSize="10" HeightRequest="300" Text="{Binding EditorText}" FontFamily="monospace"/>
+
+                <Button BackgroundColor="#2196F3" Text="Deserialize" TextColor="White" Command="{Binding DeserializeEditorText}"/>
+                <Button BackgroundColor="#2196F3" Text="Seserialize" TextColor="White" Command="{Binding SerializeObject}"/>
+
+                <Entry Placeholder="Name" Text="{Binding Name}" TextColor="#2196F3"/>
+                <Entry Placeholder="Description" Text="{Binding Description}" TextColor="#2196F3"/>
+                <Entry Placeholder="Path" Text="{Binding Path}" TextColor="#2196F3"/>
+
+                <Editor Placeholder="Write text here..." HeightRequest="300" FontFamily="Times New Roman"  Text="{Binding Text}" TextColor="#2196F3"/>
+                
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
