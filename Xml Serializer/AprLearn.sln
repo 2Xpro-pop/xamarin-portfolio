@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AprLearn.Android", "AprLearn.Android\AprLearn.Android.csproj", "{23645B6A-196B-4508-97BA-BD62A81B75DD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AprLearn", "AprLearn\AprLearn.csproj", "{FC080E76-94FB-43F9-992C-758A866FF356}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AprLearn", "AprLearn\AprLearn.csproj", "{FC080E76-94FB-43F9-992C-758A866FF356}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

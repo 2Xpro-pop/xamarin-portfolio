@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:PhotoEffect.ViewModels" x:DataType="viewmodels:Effects"
+             x:Class="PhotoEffect.MainPage"
+             >
+    <ContentPage.BindingContext>
+        <viewmodels:Effects Picker="{x:Reference picker}"
+                            Image="{x:Reference image}"/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+
+        <Frame CornerRadius="0" Grid.Row="0" Grid.Column="0" >
+            <Image Aspect="AspectFit" Source="example.jpg" x:Name="image">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="OnImageNameTapped"
+                    NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+        </Frame>
+
+        <StackLayout Grid.Row="1">
+            <Picker Title="Выбери эффект"
+                    ItemsSource="{Binding EffectModels}"
+                    ItemDisplayBinding="{Binding Name}"
+                    x:Name="picker"/>
+            <Button Text="Применить Эффект" Command="{Binding MutateImage}"/>
+            <Button Text="Сохранить" Command="{Binding SaveImage}"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
